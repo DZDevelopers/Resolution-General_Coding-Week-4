@@ -10,32 +10,35 @@ int main() {
     scanf("%lf", &a);
 
     printf("Enter symbol (+, -, *, /): ");
-    scanf(" %c", &symbol);
+    scanf("%c", &symbol);
 
     printf("Enter second number: ");
     scanf("%lf", &b);
 
     if (symbol == '+') 
         {
-        answer = a + b;
+            answer = a + b;
         } 
     else if (symbol == '-') 
-    {
-        answer = a - b;
-    } 
-        else if (symbol == '*') 
+        {
+            answer = a - b;
+        } 
+    else if (symbol == '*') 
+        {
+            answer = a * b;
+        } 
+    else if (symbol == '/') 
+        {
+            if (b == 0) 
+                {
+                    error = "Error: Cannot divide by zero!";
+                } 
+            else 
             {
-                answer = a * b;
-            } 
-        else if (symbol == '/') 
-            {
-        if (b == 0) {
-            error = "Error: Cannot divide by zero!";
-        } else {
-            answer = a / b;
-        }
-    } 
-        else 
+                answer = a / b;
+            }
+        } 
+    else 
     {
         error = "Error: Unknown operator. Use +, -, *, or /";
     }
