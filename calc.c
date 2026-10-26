@@ -4,13 +4,13 @@
 int main() {
     double a, b, answer;
     char symbol;
-    char error;
+    const char *error = NULL;
 
     printf("Enter first number: ");
     scanf("%lf", &a);
 
     printf("Enter symbol (+, -, *, /): ");
-    scanf("%c", &symbol);
+    scanf(" %c", &symbol);
 
     printf("Enter second number: ");
     scanf("%lf", &b);
